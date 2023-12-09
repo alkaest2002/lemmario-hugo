@@ -4,7 +4,8 @@
   </div>
   <div class="mt-6">
     {{ range .Pages }}
-      <a href="{{ .Permalink | safeHTML }}" class="block text-purple-950">{{ .Title }}</a>
+      <a href="{{ .Permalink | safeHTML }}" class="block text-indigo-950">{{ .Title }}</a>
     {{ end }}
   </div>
+  {{ .Layout }}
 {{ end }}

@@ -2,4 +2,13 @@
   <nav>
     <nav-item><a href="{{ (.GetPage ``).Permalink }}" class="text-3xl font-bold">{{ site.Title }}</a></nav-item>
   </nav>
+  <nav class="flex flex-wrap gap-3">
+    {{ range site.Menus.main }}
+      {{ $is_active := $.Page.IsMenuCurrent .Menu . | or ($.Page.HasMenuCurrent .Menu .) }}
+      <nav-item>
+        <a href="{{ .URL }}"
+        class="block py-3 px-5 ont-bold {{ if $is_active }}bg-slate-200{{ end }} border border-slate-500 font-bold">{{ .Name | title }}</a>
+      </nav-item>
+    {{ end }}
+  </nav>
 </nav>

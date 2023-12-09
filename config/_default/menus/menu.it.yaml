@@ -1,6 +1,8 @@
 main:
-  - name: Home
+  - name: In ordine di tempo
     pageRef: /
     weight: 10
-    params:
-      icon: home
+
+  - name: In ordine alfabetico
+    pageRef: /alfabetico
+    weight: 20
