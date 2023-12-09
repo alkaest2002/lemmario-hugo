@@ -1,0 +1,5 @@
+---
+title: pretèrito
+letter: P
+---
+pretèrito agg. e s. m. [dal lat. praeterĭtus, part. pass. di praeterire «preterire»], ant. o letter. – 1. agg. Passato, trascorso: il tempo p., le p. età; o che si riferisce al passato: rammentare la vita p.; volle ogni cosa sapere dei suoi p. casi (Boccaccio). 2. Come s. m., il p., il passato: grato [= gratitudine] che mai non si stingue Del libro che ’l preterito rassegna (Dante), non si cancella dal libro della memoria che registra il passato; nel p., in p., in tempi passati. Nel linguaggio grammaticale, tempo p., o assol. preterito, denominazione generica dei tempi passati della coniugazione verbale (per cui si poteva avere un p. imperfetto, un p. perfetto e piuccheperfetto, ecc.): ha la nostra lingua due p., uno prossimo e uno remoto (C. R. Dati). Al plur., i preteriti, gli uomini vissuti in età passate. 3. Nell’uso fam. e scherz., come s. m., il p., il deretano, il sedere: se tornano i Napolitani, colui andrà a baciar loro il p. (De Roberto); vi metto fuori io a calci nel p.! (Bacchelli).

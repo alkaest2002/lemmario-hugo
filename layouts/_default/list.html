@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="py-2">
+    {{ .Title }}
+  </div>
+  <div class="mt-6">
+    {{ range .Pages }}
+      <a href="{{ .Permalink | safeHTML }}" class="block text-purple-700">{{ .Title }}</a>
+    {{ end }}
+  </div>
+{{ end }}

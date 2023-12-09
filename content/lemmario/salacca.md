@@ -1,0 +1,5 @@
+---
+title: salacca
+letter: S
+---
+salacca (region. saracca) s. f. [prob. dallo scozz. sillock, raccostato a sale]. – 1. a. Nome pop., in varie regioni, della cheppia e di altri pesci simili alle sardine, ma di scarso pregio, conservati e venduti sotto sale o affumicati. b. estens. Cibo misero, da poveri: mangiare salacche, vivere di salacche, mangiare poco e male, vivere poveramente. 2. fig. a. In funzione di predicato, e anche in similitudini, con riferimento a persona molto magra, secca, allampanata: è una s.; ha le occhiaie che le scendono fino in bocca ed è magra come una salacca (Dacia Maraini). b. scherz. e spreg. Sciabola. c. scherz. e spreg. Libro vecchio, mal tenuto e di poco conto. 3. Colpo, percossa dati con la mano aperta: dare, prendere una salacca. ◆ Dim. salacchino m. (anche leggero colpo dato con due o tre dita stese); accr. salaccóne m.

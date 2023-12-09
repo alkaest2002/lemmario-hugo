@@ -1,0 +1,5 @@
+---
+title: rescritto
+letter: R
+---
+rescritto s. m. [dal lat. rescriptum, neutro sostantivato del part. pass. di rescribĕre «rispondere per scritto» (comp. di re- e scribĕre «scrivere»)]. – 1. a. In diritto romano, la risposta scritta che, in età imperiale, l’imperatore dava a richieste scritte di privati o anche di funzionarî su casi di diritto per lo più singoli: queste risoluzioni imperiali divennero spesso, con il sec. 2°, fonti di diritto. b. In diritto canonico, il responso scritto con cui l’autorità ecclesiastica giurisdizionalmente competente, su istanza di un richiedente, concede una grazia o risolve una controversia (o compie tutti e due questi atti insieme). 2. Denominazione generica di ogni lettera di carattere normativo di sovrani dell’età antica o moderna (ordinanze, editti, lettere patenti).

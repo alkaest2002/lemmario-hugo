@@ -1,0 +1,5 @@
+---
+title: vivagno
+letter: V
+---
+vivagno s. m. [dal lat. mediev. vivagnum, der. di (*orum) vivum «(margine oltre il quale comincia) il vivo (della stoffa)»]. – 1. a. Ciascuno dei due margini laterali di un tessuto in pezza (sinon. meno com. di cimosa); anche, la prima o l’ultima maglia di un lavoro ai ferri o all’uncinetto. b. Nell’attrezzatura navale, ciascuno degli orli laterali dei teli (ferzi) di olona, con cui si fanno le vele: è limitato da un filo rosso o azzurro, che serve di guida nelle cuciture. 2. Con varî sign. estens. in Dante: a. Riva, sponda: Non corse mai sì tosto acqua per doccia A volger ruota di molin terragno ... Come ’l maestro mio per quel vivagno (Inf. XXIII, 49). b. Margine di un libro: solo ai Decretali Si studia sì che pare a’ lor vivagni (Par. IX, 135), consunti per l’uso continuo e anche pieni di chiose.

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ .Site.Language }}" class="h-full">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="generator" content="Hugo {{ hugo.Version }}">
+	<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+	{{ with site.Params.description }}
+		<meta name="description" content="{{ . }}">
+	{{ end }}
+	{{ with resources.Get "css/main.css" }}
+		<link rel="stylesheet" media="screen" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+	{{ end }}
+</head>
+
+<body class="h-full flex flex-col font-serif text-slate-600 bg-slate-100">
+  <header>
+    <section class="container max-w-[1200px] p-3 mx-auto">
+      {{ partial "base-header" . }}
+    </section>
+  </header>
+  <main class="grow mb-8">
+    <section class="container h-full max-w-[1200px] p-6 pb-3 mx-auto">
+      {{ block "main" . }}{{ end }}
+    </section>
+  </main>
+  <footer class="py-8">
+    <section class="container max-w-[1200px] p-6 mx-auto">
+      {{ partial "base-footer" . }}
+    </section>
+  </footer>
+</body>
+
+{{ with $scripts := resources.Match "js/**" }}
+  {{ range $script := $scripts }}
+    <script>{{ $script.Content | safeJS }}</script>
+  {{ end }}
+{{ end }}
+
+</html>

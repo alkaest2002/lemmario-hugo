@@ -1,0 +1,5 @@
+---
+title: assettare
+letter: A
+---
+assettare v. tr. [lat. *asseditare, der. di sedere «star seduto»] (io assètto, ecc.). – 1. a. Mettere in ordine, disporre convenientemente gli oggetti: a. una stanza; gli ordinai di a. ogni cosa sopra il calesse (Foscolo); e con la particella pron.: assettarsi gli abiti, i capelli; si assettava sdegnosa il fazzoletto bianco sul petto (Verga). b. rifl. Mettersi in ordine, rassettarsi: Lucia ... andava intanto assettandosi, per un’abitudine, per un istinto di pulizia e di verecondia (Manzoni). 2. rifl. e intr. pron. Apparecchiarsi, disporsi: Lo bivero [il castoro] s’assetta a far sua guerra (Dante). Nell’uso ant. e region., prendere posto, mettersi a sedere: Poi che si sono a tavola assettati (Ariosto). Part. pass. assettato, anche come agg., ordinato, messo in bell’assetto; riferito a persona, che mette gran cura nell’acconciarsi, nel vestire, anche nella forma del dim. scherz.: piccolo di persona era e molto assettatuzzo (Boccaccio).

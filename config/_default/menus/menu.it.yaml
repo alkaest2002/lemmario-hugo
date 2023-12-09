@@ -1,0 +1,6 @@
+main:
+  - name: Home
+    pageRef: /
+    weight: 10
+    params:
+      icon: home

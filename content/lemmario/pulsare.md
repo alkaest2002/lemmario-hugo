@@ -1,0 +1,5 @@
+---
+title: pulsare
+letter: P
+---
+pulsare v. intr. [dal lat. pulsare, intens. di pellĕre, part. pass. pulsus] (aus. avere). – 1. Dare battiti, palpitare; indica in partic. il movimento ritmico del cuore e la dilatazione delle arterie in corrispondenza di ogni sistole cardiaca: il cuore pulsa regolarmente; il p. di un’arteria al polso, alla tempia. 2. fig. a. Essere pieno di movimento, di vitalità, di attività intense: una città, una spiaggia che pulsa di vita. b. letter. Di meccanismi, congegni, motori e sim., produrre un rumore cadenzato (spec. se attutito dalla lontananza): il p. dei motoscafi nel canale (D’Annunzio); lontanissimi, dietro ai vetri dello stabilimento, si sentono p. i pistoni, ronzare le dinamo (E. Cecchi). Anche, poet., riferito al movimento ritmico del mare: Mormora antiche storie, oscuri canti L’onda che senza fin pulsa e si frange (Graf). 3. ant. Battere a una porta, bussare (che è il sign. più noto del verbo latino: v. anche il lemma seguente). ◆ Part. pres. pulsante, anche come agg. (v. pulsante1).

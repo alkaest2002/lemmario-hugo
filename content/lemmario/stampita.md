@@ -1,0 +1,5 @@
+---
+title: stampita
+letter: S
+---
+stampita s. f. [dal provenz. estampida (fr. ant. estampie), der. di estampir «battere i piedi», che è dal germ. *stampjan «pestare»]. – 1. Genere musicale strofico, anche senza parole, fortemente ritmato, della Provenza antica, composto di molti piccoli temi, alternati con uno sul quale si svolgeva il ritornello (tra i più noti e più antichi esempî è la celebre composizione Kalenda maya di Rambaldo di Vaqueiras): poi che alcuna s. e una ballatetta o due furon cantate, lietamente, secondo che alla reina piacque, si misero a mangiare (Boccaccio). 2. fig., tosc. ant. Discorso lungo e noioso: ogni giorno si fanno leggi, disquisizioni e stampite interminabili sulla pulizia stradale (Faldella); nel plur., smorfie, o rimbrotti, paternale: quante stampite!; mi ha fatto un monte di stampite.

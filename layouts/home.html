@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="mt-6">
+    {{ $pages := where .Site.RegularPages.ByDate "Section" "lemmario" }}
+    {{ $paginator := .Paginate $pages 50 }}
+    <div class="divide divide-y divide-slate-300">
+      {{ range $paginator.Pages }}
+        <div class="p-3">
+          <a href="{{ .Permalink | safeHTML }}" class="block text-purple-950">{{ .Title }}</a>
+        </div>
+      {{ end }}
+    </div>
+    <div>
+      {{ partial "base-paginator" $paginator }}
+    </div>
+  </div>
+{{ end }}

@@ -1,0 +1,5 @@
+title: Lemmario
+baseURL: /
+languageCode: it-IT
+defaultContentLanguage: it
+relativeURLs: true
