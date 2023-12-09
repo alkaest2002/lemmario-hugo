@@ -1,7 +1,7 @@
 {{ define "main" }}
   <div class="mt-6">
-    {{ $lemmarioByLastMod := (partialCached "get_lemmario_by_lastmod" .) }}
-    {{ $paginator := .Paginate $lemmarioByLastMod 50 }}
+    {{ $pages := where .Site.RegularPages "Section" "lemmario" }}
+    {{ $paginator := .Paginate $pages 50 }}
     <div>
       {{ partial "base_paginator" $paginator }}
     </div>

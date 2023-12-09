@@ -2,4 +2,4 @@
 title: zabètta
 letter: Z
 ---
-zabètta 1. regionale nell'uso lombardo: pettegola, linguaccia; riferibile anche a maschi
+zabètta. regionale nell'uso lombardo: pettegola, linguaccia; riferibile anche a maschi

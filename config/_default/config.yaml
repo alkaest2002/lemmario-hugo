@@ -3,3 +3,4 @@ baseURL: /
 languageCode: it-IT
 defaultContentLanguage: it
 relativeURLs: true
+enableGitInfo: true
