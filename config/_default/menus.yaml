@@ -1,8 +1,8 @@
 main:
   - name: In ordine di alfabetico
-    pageRef: /lemmi/ordine/alfabetico
+    pageRef: "/elenchi/alfabetico"
     weight: 10
 
   - name: In ordine temporale
-    pageRef: /lemmi/ordine/di-inserimento
+    pageRef: "/elenchi/inserimento"
     weight: 20

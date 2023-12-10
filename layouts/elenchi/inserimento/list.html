@@ -1,5 +1,5 @@
 {{ define "main" }}
   {{ $lemmarioByLastMod := (partialCached "get_lemmario_by_lastmod" .) }}
   {{ $paginator := .Paginate $lemmarioByLastMod 50 }}
-  {{ partial "list_of_lemmas" (dict "paginator" $paginator "title" "In ordine di insertimento")}}
+  {{ partial "list_of_lemmas" (dict "paginator" $paginator "title" "Lemmi in ordine di insertimento temporale")}}
 {{ end }}

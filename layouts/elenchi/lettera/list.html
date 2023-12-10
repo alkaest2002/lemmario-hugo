@@ -1,0 +1,5 @@
+{{ define "main" }}
+  {{ $lemmarioByLastMod := (partial "get_lemmario_by_letter" .) }}
+  {{ $paginator := .Paginate $lemmarioByLastMod 50 }}
+  {{ partial "list_of_lemmas" (dict "paginator" $paginator "title" "Lemmi ordinati per lettera")}}
+{{ end }}

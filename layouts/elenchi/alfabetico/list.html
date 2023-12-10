@@ -1,5 +1,5 @@
 {{ define "main" }}
   {{ $lemmarioByAlpha := partialCached "get_lemmario_by_alpha" . }}
   {{ $paginator := .Paginate $lemmarioByAlpha 50 }}
-  {{ partial "list_of_lemmas" (dict "paginator" $paginator "title" " In ordine alfabetico")}}
+  {{ partial "list_of_lemmas" (dict "paginator" $paginator "title" "Lemmi in ordine alfabetico")}}
 {{ end }}
