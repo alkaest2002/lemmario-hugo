@@ -1,6 +1,14 @@
 <nav class="flex flex-wrap justify-between items-center p-3">
-  <nav>
-    <nav-item><a href="{{ (.GetPage ``).Permalink }}" class="text-3xl font-bold">{{ site.Title }}</a></nav-item>
+  <nav  x-data>
+    <nav-item>
+      <a 
+        href="{{ (.GetPage ``).Permalink }}" 
+        class="text-3xl font-bold"
+        @click="$store.lemmario.orderBy = 'time'"
+      >
+        {{ site.Title }}
+      </a>
+    </nav-item>
   </nav>
   <nav class="flex flex-wrap gap-3" x-data>
       {{ with (index site.Menus.main 0) }}
