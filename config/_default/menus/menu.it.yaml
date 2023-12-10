@@ -1,8 +1,8 @@
 main:
-  - name: In ordine di tempo
-    pageRef: /
+  - name: In ordine di alfabetico
+    pageRef: /alpha
     weight: 10
 
-  - name: In ordine alfabetico
-    pageRef: /alfabetico
+  - name: In ordine temporale
+    pageRef: /time
     weight: 20

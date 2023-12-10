@@ -1,6 +1,6 @@
 {{ define "main" }}
-  {{ $pages := partialCached "get_lemmario_by_alpha" . }}
-  {{ $paginator := .Paginate $pages 50 }}
+  {{ $lemmarioByAlpha := partialCached "get_lemmario_by_alpha" . }}
+  {{ $paginator := .Paginate $lemmarioByAlpha 50 }}
   <div class="mb-6">
     <h1 class="italic">
       In ordine alfabetico
