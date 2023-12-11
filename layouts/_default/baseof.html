@@ -21,19 +21,19 @@
       {{ partial "base_header" . }}
     </section>
   </header>
-  <main class="grow mb-8">
+  <main class="grow">
     <section class="container h-full max-w-[1200px] p-6 pb-3 mx-auto">
-      <div class="grid rid-cols-1 md:grid-cols-3 md:gap-[30px]">
-        <div class="md:col-span-2">
+      <div class="h-full grid rid-cols-1 md:grid-cols-3 md:gap-[60px]">
+        <div class="h-full md:col-span-2 flex flex-col">
           {{ block "main" . }}{{ end }}
         </div>
         <div>
-          <div class="mb-6">
+          <div class="my-6 md:mt-0">
             <h1 class="italic">
               Filtra per lettera
             </h1>
           </div>
-          <div class="flex flex-wrap gap-3 py-3 mx-auto" x-data>
+          <div class="flex flex-wrap gap-3 mx-auto" x-data>
             {{ range (.GetPage "lemmi").Sections }}
               {{ $lemmi := .RegularPages }}
               {{ if gt (len $lemmi) 0 }}
@@ -57,7 +57,7 @@
       </div>
     </section>
   </main>
-  <footer class="py-8">
+  <footer class="py-3">
     <section class="container max-w-[1200px] p-6 mx-auto">
       {{ partial "base_footer" . }}
     </section>
