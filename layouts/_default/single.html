@@ -3,7 +3,7 @@
   {{ $lemmarioByLastMod := (partialCached "get_lemmario_by_lastmod" .) }}
   <h1 class="text-2xl font-bold">{{ .Title | humanize }}</h1>
   <div class="mt-6">
-    {{ .Content }}
+    {{ .Content | markdownify }}
   </div>
   <div x-data x-cloak>
     <div class="mt-9 flex flex-wrap gap-3" x-show="$store.lemmario.orderBy == 'alpha'">
