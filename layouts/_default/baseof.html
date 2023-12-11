@@ -34,8 +34,9 @@
             </h1>
           </div>
           <div class="flex flex-wrap gap-3 py-3 mx-auto" x-data>
-            {{ range (.GetPage "elenchi/lettera").Pages }}
-              {{ if gt (len (partial "get_lemmario_by_letter" .)) 0 }}
+            {{ range (.GetPage "lemmi").Sections }}
+              {{ $lemmi := .RegularPages }}
+              {{ if gt (len $lemmi) 0 }}
                 <a 
                   href="{{ .Permalink }}" 
                   class="block p-4 px-6 border border-slate-500 font-mono {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }}"
