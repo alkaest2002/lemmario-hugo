@@ -3,6 +3,6 @@ main:
     pageRef: "/elenchi/alfabetico"
     weight: 10
 
-  - name: In ordine temporale
+  - name: In ordine di inserimento
     pageRef: "/elenchi/inserimento"
     weight: 20

@@ -601,10 +601,6 @@ video {
   margin-bottom: 1.5rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -732,11 +728,6 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -806,15 +797,7 @@ video {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .md\:gap-\[30px\] {
-    gap: 30px;
-  }
-
   .md\:gap-\[60px\] {
     gap: 60px;
-  }
-
-  .md\:gap-\[100px\] {
-    gap: 100px;
   }
 }

@@ -10,30 +10,4 @@
       </a>
     </nav-item>
   </nav>
-  <nav class="flex flex-wrap gap-3" x-data>
-      {{ with (index site.Menus.main 0) }}
-        <nav-item>
-          <a
-            href="{{ .URL }}"
-            class="block py-3 px-5 ont-bold border border-slate-500 font-bold"
-            :class="{'bg-slate-200': $store.lemmario.orderBy == 'alpha'}"
-            @click="$store.lemmario.orderBy = 'alpha'"
-          >
-            {{ .Name | title }}
-          </a>
-        </nav-item>
-      {{ end }}
-      {{ with (index site.Menus.main 1) }}
-        <nav-item>
-          <a
-            href="{{ .URL }}"
-            class="block py-3 px-5 ont-bold border border-slate-500 font-bold"
-            :class="{'bg-slate-200': $store.lemmario.orderBy == 'time'}"
-            @click="$store.lemmario.orderBy = 'time'"
-          >
-            {{ .Name | title }}
-          </a>
-        </nav-item>
-      {{ end }}
-  </nav>
 </nav>
