@@ -23,7 +23,37 @@
   </header>
   <main class="grow mb-8">
     <section class="container h-full max-w-[1200px] p-6 pb-3 mx-auto">
-      {{ block "main" . }}{{ end }}
+      <div class="grid rid-cols-1 md:grid-cols-3 md:gap-[30px]">
+        <div class="md:col-span-2">
+          {{ block "main" . }}{{ end }}
+        </div>
+        <div>
+          <div class="mb-6">
+            <h1 class="italic">
+              Filtra per lettera
+            </h1>
+          </div>
+          <div class="flex flex-wrap gap-3 py-3 mx-auto" x-data>
+            {{ range (.GetPage "elenchi/lettera").Pages }}
+              {{ if gt (len (partial "get_lemmario_by_letter" .)) 0 }}
+                <a 
+                  href="{{ .Permalink }}" 
+                  class="block p-4 px-6 border border-slate-500 font-mono {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }}"
+                  @click="$store.lemmario.orderBy = 'alpha'" 
+                >
+                  {{ .Params.letter }}
+                </a>
+              {{ else }}
+                <span 
+                  class="block p-4 px-6 border border-slate-500/50 text-slate-600/50 font-mono 
+                    {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }} cursor-[not-allowed]">
+                  {{ .Params.letter }}
+                </span>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="py-8">
