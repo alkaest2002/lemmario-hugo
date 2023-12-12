@@ -15,7 +15,10 @@
     crossorigin="anonymous">
   {{ end }}
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
-  <script src="/pagefind/pagefind-ui.js"></script>
+  <script defer src="/pagefind/pagefind-ui.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="{{ (resources.GetMatch `js/alpine.js`).Permalink }}"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body class="h-full flex flex-col font-serif text-slate-600 bg-slate-100">
@@ -36,12 +39,6 @@
       {{ partial "base_footer" . }}
     </section>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  </script>
-  {{ range $script := resources.Match "js/**" }}
-    <script>{{ $script.Content | safeJS }}</script>
-  {{ end }}
   {{ range $script := .Resources.Match "*.js" }}
     <script>{{ $script.Content | safeJS }}</script>
   {{ end }}
