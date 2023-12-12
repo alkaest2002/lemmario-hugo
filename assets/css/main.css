@@ -583,9 +583,9 @@ video {
   margin-right: auto;
 }
 
-.my-9 {
-  margin-top: 2.25rem;
-  margin-bottom: 2.25rem;
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .mb-3 {
@@ -598,10 +598,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.mt-9 {
-  margin-top: 2.25rem;
 }
 
 .block {
@@ -650,10 +646,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .gap-3 {
@@ -805,7 +797,10 @@ body {
   padding: 0 !important;
 }
 
-*:focus {
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
   outline: none;
 }
 

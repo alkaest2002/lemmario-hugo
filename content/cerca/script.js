@@ -4,4 +4,5 @@ window.addEventListener('DOMContentLoaded', (event) => {
     showSubResults: true, 
     showImages: false,
   });
+  document.getElementsByClassName('pagefind-ui__search-input')[0].focus();
 });

@@ -38,10 +38,6 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <script>
-    document.addEventListener('alpine:init', () => {
-      Alpine.store('lemmario', { orderBy: Alpine.$persist("time") });
-    });
   </script>
   {{ range $script := resources.Match "js/**" }}
     <script>{{ $script.Content | safeJS }}</script>

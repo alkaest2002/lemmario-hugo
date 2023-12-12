@@ -5,8 +5,8 @@
   <div class="grow mt-6" data-pagefind-body>
     {{ .Content | markdownify }}
   </div>
-  <div x-data x-cloak>
-    <div class="mt-9 flex flex-wrap gap-3" x-show="$store.lemmario.orderBy == 'alpha'">
+  <div class="my-6" x-data x-cloak>
+    <div class="flex flex-wrap gap-3" x-show="$store.lemmario.orderBy == 'alpha'">
       {{ with $lemmarioByAlpha.Next . }}
         <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200">{{ .Title }}</a>
       {{ end }}
@@ -14,7 +14,7 @@
         <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200">{{ .Title }}</a>
       {{ end }}
     </div>
-    <div class="mt-9 flex flex-wrap gap-3" x-show="$store.lemmario.orderBy == 'time'">
+    <div class="flex flex-wrap gap-3" x-show="$store.lemmario.orderBy == 'time'">
       {{ with $lemmarioByLastMod.Next . }}
         <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200">{{ .Title }}</a>
       {{ end }}
