@@ -14,6 +14,8 @@
   <link rel="stylesheet" media="screen" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"
     crossorigin="anonymous">
   {{ end }}
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  <script src="/pagefind/pagefind-ui.js"></script>
 </head>
 
 <body class="h-full flex flex-col font-serif text-slate-600 bg-slate-100">
@@ -24,8 +26,8 @@
   </header>
   <main class="grow">
     <section class="container h-full max-w-[1200px] p-6 pb-3 mx-auto">
-      <div class="h-full grid rid-cols-1 md:grid-cols-3 md:gap-[60px]">
-        <div class="h-full md:col-span-2 flex flex-col">
+      <div class="grid rid-cols-1 md:grid-cols-3 md:gap-[60px]">
+        <div class="md:col-span-2 flex flex-col">
           {{ block "main" . }}{{ end }}
         </div>
         <div>
@@ -36,7 +38,7 @@
           </div>
           {{ with (index site.Menus.main 1) }}
             <div class="mb-3" x-data>
-              <a href="{{ .URL }}" class="block py-3 px-5 ont-bold border border-slate-500 font-bold"
+              <a href="{{ .URL }}" class="block py-3 px-5 font-bold border rounded border-slate-500 font-bold"
                 :class="{'bg-slate-200': $store.lemmario.orderBy == 'time'}" @click="$store.lemmario.orderBy = 'time'">
                 {{ .Name | humanize }}
               </a>
@@ -44,7 +46,7 @@
           {{ end }}
           {{ with (index site.Menus.main 0) }}
             <div class="mb-6" x-data>
-              <a href="{{ .URL }}" class="block py-3 px-5 ont-bold border border-slate-500 font-bold"
+              <a href="{{ .URL }}" class="block py-3 px-5 font-bold border rounded border-slate-500 font-bold"
                 :class="{'bg-slate-200': $store.lemmario.orderBy == 'alpha'}"
                 @click="$store.lemmario.orderBy = 'alpha'">
                 {{ .Name | humanize }}
@@ -61,7 +63,7 @@
             {{ $lemmi := .RegularPages }}
             {{ if gt (len $lemmi) 0 }}
             <a href="{{ .Permalink }}"
-              class="block p-4 px-6 border border-slate-500 font-mono {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }}"
+              class="block p-4 px-6 border border-slate-500 rounded font-mono {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }}"
               @click="$store.lemmario.orderBy = 'alpha'">
               {{ .Params.letter }}
             </a>
@@ -86,13 +88,13 @@
   <script>
     document.addEventListener('alpine:init', () => {
       Alpine.store('lemmario', { orderBy: Alpine.$persist("time") });
-    })
+    });
   </script>
-
-  {{ with $scripts := resources.Match "js/**" }}
-  {{ range $script := $scripts }}
-  <script>{ { $script.Content | safeJS } }</script>
+  {{ range $script := resources.Match "js/**" }}
+    <script>{{ $script.Content | safeJS }}</script>
   {{ end }}
+  {{ range $script := .Resources.Match "*.js" }}
+    <script>{{ $script.Content | safeJS }}</script>
   {{ end }}
 </body>
 
