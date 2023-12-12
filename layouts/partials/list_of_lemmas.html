@@ -8,6 +8,6 @@
     <a href="{{ .Permalink }}" class="block text-slate-600">{{ .Title | humanize }}</a>
   </div>
 {{ end }}
-<div>
+<div class="py-3">
   {{ partial "base_paginator" .paginator }}
 </div>
