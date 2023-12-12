@@ -1,14 +1,17 @@
 <nav class="flex flex-wrap gap-3 justify-center items-center p-3 text-center">
   <nav x-data>
-    <nav-item>
-      <a 
-        href="{{ (.GetPage ``).Permalink }}" 
-        class="text-3xl font-bold"
-        @click="$store.lemmario.orderBy = 'time'"
-      >
-        {{ site.Title }}
-      </a>
-      <p>consultazione personale di termini inconsueti</p>
+    <nav-item class="flex flex-col justify-center items-center mx-auto">
+      <img id="logo-img" src="/static/images/logo.svg" alt="book-logo">
+      <div class="text-center">
+        <a 
+          href="{{ (.GetPage ``).Permalink }}" 
+          class="text-3xl font-bold"
+          @click="$store.lemmario.orderBy = 'time'"
+        >
+          {{ site.Title }}
+        </a>
+        <p>consultazione personale di termini inconsueti</p>
+      </div>
     </nav-item>
   </nav>
 </nav>

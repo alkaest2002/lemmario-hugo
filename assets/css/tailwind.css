@@ -28,3 +28,7 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+
+#logo-img {
+  width: 64px;
+}
