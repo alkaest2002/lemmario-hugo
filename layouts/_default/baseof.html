@@ -33,7 +33,7 @@
         <div class="md:col-span-2 flex flex-col">
           {{ block "main" . }}{{ end }}
         </div>
-        <div>
+        <div hx-boost="true">
           <div class="mb-3">
             <h1 class="italic">
               Tipo di ordinamento
@@ -43,7 +43,7 @@
           <div class="mb-3" x-data>
             <a href="{{ .URL }}" class="block py-3 px-5 border rounded border-slate-500 font-bold"
               :class="{'bg-slate-200': $store.lemmario.orderBy == 'time'}" @click="$store.lemmario.orderBy = 'time'"
-              hx-get="{{ .URL }}">
+            >
               {{ .Name | humanize }}
             </a>
           </div>
@@ -51,7 +51,8 @@
           {{ with (index site.Menus.main 0) }}
           <div class="mb-6" x-data>
             <a href="{{ .URL }}" class="block py-3 px-5 border rounded border-slate-500 font-bold"
-              :class="{'bg-slate-200': $store.lemmario.orderBy == 'alpha'}" @click="$store.lemmario.orderBy = 'alpha'">
+              :class="{'bg-slate-200': $store.lemmario.orderBy == 'alpha'}" @click="$store.lemmario.orderBy = 'alpha'"
+            >
               {{ .Name | humanize }}
             </a>
           </div>
@@ -67,7 +68,7 @@
             {{ if gt (len $lemmi) 0 }}
             <a href="{{ .Permalink }}"
               class="block p-4 px-6 border border-slate-500 rounded font-mono {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }}"
-              @click="$store.lemmario.orderBy = 'alpha'" hx-get="{{ .Permalink }}">
+              @click="$store.lemmario.orderBy = 'alpha'">
               {{ .Params.letter }}
             </a>
             {{ else }}
@@ -79,7 +80,7 @@
             {{ end }}
           </div>
           <div class="mt-6 mb-3">
-            <a href="{{  (.GetPage `cerca`).Permalink  }}" class="italic">
+            <a href="{{  (.GetPage `cerca`).Permalink  }}" class="italic" hx-disable>
               Pagina di ricerca &rarr;
             </a>
           </div>

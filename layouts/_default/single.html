@@ -8,27 +8,27 @@
       {{ .Content | markdownify }}
     </div>
   </div>
-  <div class="my-6" x-data x-cloak>
+  <div class="my-6" x-data x-cloak hx-boost="true">
     <div class="flex flex-wrap gap-3" x-show="$store.lemmario.orderBy == 'alpha'">
       {{ with $lemmarioByAlpha.Next . }}
-      <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200" hx-boost="true">
+      <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200">
         {{ .Title }}
       </a>
       {{ end }}
       {{ with $lemmarioByAlpha.Prev . }}
-      <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200" hx-boost="true">
+      <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200">
         {{ .Title }}
       </a>
       {{ end }}
     </div>
     <div class="flex flex-wrap gap-3" x-show="$store.lemmario.orderBy == 'time'">
       {{ with $lemmarioByLastMod.Next . }}
-      <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200" hx-boost="true">
+      <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200">
         {{ .Title }}
       </a>
       {{ end }}
       {{ with $lemmarioByLastMod.Prev . }}
-      <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200" hx-boost="true">
+      <a href="{{ .RelPermalink }}" class="grow block p-3 border border-slate-500 font-bold bg-slate-200">
         {{ .Title }}
       </a>
       {{ end }}
