@@ -8,14 +8,15 @@
   <meta name="generator" content="Hugo {{ hugo.Version }}">
   <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
   {{ with site.Params.description }}
-    <meta name="description" content="{{ . }}">
+  <meta name="description" content="{{ . }}">
   {{ end }}
   {{ with resources.Get "css/main.css" }}
-    <link rel="stylesheet" media="screen" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  <link rel="stylesheet" media="screen" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"
+    crossorigin="anonymous">
   {{ end }}
   {{ with resources.Get "js/bundle.js" | fingerprint }}
-		<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
-	{{ end }}
+  <script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+  {{ end }}
   <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
   <script defer src="/pagefind/pagefind-ui.js"></script>
 </head>
@@ -26,7 +27,7 @@
       {{ partial "base_header" . }}
     </section>
   </header>
-  <main class="grow">
+  <main id="main" class="grow" hx-select="#main" hx-target="#main" hx-swap="innerHTML show:#main:top" hx-push-url="true">
     <section class="container h-full max-w-[1200px] p-6 pb-3 mx-auto">
       <div class="grid rid-cols-1 md:grid-cols-3 md:gap-[60px]">
         <div class="md:col-span-2 flex flex-col">
@@ -39,21 +40,21 @@
             </h1>
           </div>
           {{ with (index site.Menus.main 1) }}
-            <div class="mb-3" x-data>
-              <a href="{{ .URL }}" class="block py-3 px-5 font-bold border rounded border-slate-500 font-bold"
-                :class="{'bg-slate-200': $store.lemmario.orderBy == 'time'}" @click="$store.lemmario.orderBy = 'time'">
-                {{ .Name | humanize }}
-              </a>
-            </div>
+          <div class="mb-3" x-data>
+            <a href="{{ .URL }}" class="block py-3 px-5 border rounded border-slate-500 font-bold"
+              :class="{'bg-slate-200': $store.lemmario.orderBy == 'time'}" @click="$store.lemmario.orderBy = 'time'"
+              hx-get="{{ .URL }}">
+              {{ .Name | humanize }}
+            </a>
+          </div>
           {{ end }}
           {{ with (index site.Menus.main 0) }}
-            <div class="mb-6" x-data>
-              <a href="{{ .URL }}" class="block py-3 px-5 font-bold border rounded border-slate-500 font-bold"
-                :class="{'bg-slate-200': $store.lemmario.orderBy == 'alpha'}"
-                @click="$store.lemmario.orderBy = 'alpha'">
-                {{ .Name | humanize }}
-              </a>
-            </div>
+          <div class="mb-6" x-data>
+            <a href="{{ .URL }}" class="block py-3 px-5 border rounded border-slate-500 font-bold"
+              :class="{'bg-slate-200': $store.lemmario.orderBy == 'alpha'}" @click="$store.lemmario.orderBy = 'alpha'">
+              {{ .Name | humanize }}
+            </a>
+          </div>
           {{ end }}
           <div class="mt-6 mb-3">
             <h1 class="italic">
@@ -66,19 +67,19 @@
             {{ if gt (len $lemmi) 0 }}
             <a href="{{ .Permalink }}"
               class="block p-4 px-6 border border-slate-500 rounded font-mono {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }}"
-              @click="$store.lemmario.orderBy = 'alpha'">
+              @click="$store.lemmario.orderBy = 'alpha'" hx-get="{{ .Permalink }}">
               {{ .Params.letter }}
             </a>
             {{ else }}
             <span class="block p-4 px-6 border border-slate-500/50 text-slate-600/50 font-mono 
-                  {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }} cursor-[not-allowed]">
+                      {{ if eq $.Params.letter .Params.letter }}bg-slate-200{{ end }} cursor-[not-allowed]">
               {{ .Params.letter }}
             </span>
             {{ end }}
             {{ end }}
           </div>
           <div class="mt-6 mb-3">
-            <a  href="{{  (.GetPage `cerca`).Permalink  }}" class="italic">
+            <a href="{{  (.GetPage `cerca`).Permalink  }}" class="italic">
               Pagina di ricerca &rarr;
             </a>
           </div>
@@ -91,11 +92,10 @@
     </section>
   </footer>
   {{ range $script := .Resources.Match "*.js" }}
-     {{ if hugo.IsDevelopment }}
-      {{ . }}
+    {{ if hugo.IsDevelopment }}
       {{ with . | js.Build }}
         <script src="{{ .RelPermalink }}"></script>
-      {{ end }}
+     {{ end }}
     {{ else }}
       {{ $opts := dict "minify" true }}
       {{ with . | js.Build $opts | fingerprint }}
@@ -104,4 +104,5 @@
     {{ end }}
   {{ end }}
 </body>
+
 </html>

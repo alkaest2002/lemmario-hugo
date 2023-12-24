@@ -1,20 +1,24 @@
 {{ if gt .TotalPages 1 }}
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 py-3">
-    {{ with . }}
-      <div class="bg-slate-200">
-        {{ if .HasPrev }}
-          <a href="{{ .Prev.URL }}" class="block p-3 border rounded border-slate-500 font-bold">prec</a>
-        {{ else }}
-            <span class="block p-3 border rounded border-slate-500/30 text-black/30 cursor-[not-allowed] font-bold">prec</span>
-        {{ end }}
-      </div>
-      <div class="bg-slate-200">
-        {{ if .HasNext }}
-          <a href="{{ .Next.URL }}" class="block p-3 border rounded border-slate-500 font-bold">succ</a>
-        {{ else }}
-            <span class="block p-3 border rounded border-slate-500/30 text-black/30 cursor-[not-allowed] font-bold">succ</span>
-        {{ end }}
-      </div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3 py-3">
+  {{ with . }}
+  <div class="bg-slate-200">
+    {{ if .HasPrev }}
+    <a href="{{ .Prev.URL }}" class="block p-3 border rounded border-slate-500 font-bold"
+      hx-get="{{ .Prev.URL }}">
+      prec
+    </a>
+    {{ else }}
+    <span class="block p-3 border rounded border-slate-500/30 text-black/30 cursor-[not-allowed] font-bold">prec</span>
     {{ end }}
   </div>
+  <div class="bg-slate-200">
+    {{ if .HasNext }}
+    <a href="{{ .Next.URL }}" class="block p-3 border rounded border-slate-500 font-bold"
+      hx-get="{{ .Next.URL }}">succ</a>
+    {{ else }}
+    <span class="block p-3 border rounded border-slate-500/30 text-black/30 cursor-[not-allowed] font-bold">succ</span>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
 {{ end }}
