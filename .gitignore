@@ -24,3 +24,4 @@ _tailwind
 .DS_Store
 public/
 resources/
+node_modules/

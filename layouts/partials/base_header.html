@@ -1,17 +1,15 @@
 <nav class="flex flex-wrap gap-3 justify-center items-center p-3 text-center">
   <nav x-data>
     <nav-item class="flex flex-col justify-center items-center mx-auto">
-      <img id="logo-img" src="/static/images/logo.svg" alt="book-logo" width="64" height="64">
-      <div class="text-center">
-        <a 
-          href="{{ (.GetPage ``).Permalink }}" 
-          class="text-3xl font-bold"
-          @click="$store.lemmario.orderBy = 'time'"
-        >
-          {{ site.Title }}
-        </a>
+      <a 
+        href="{{ (.GetPage ``).Permalink }}" 
+        class="flex flex-col justify-center items-center mx-auto"
+        @click="$store.lemmario.orderBy = 'time'"
+      >
+        <img id="logo-img" src="/static/images/logo.svg" alt="book-logo" width="64" height="64">
+        <p class="text-3xl font-bold ">{{ site.Title }}</p>
         <p>consultazione personale di termini inconsueti</p>
-      </div>
+      </a>
     </nav-item>
   </nav>
 </nav>
