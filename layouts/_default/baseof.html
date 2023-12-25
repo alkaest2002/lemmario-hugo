@@ -27,7 +27,16 @@
       {{ partial "base_header" . }}
     </section>
   </header>
-  <main id="main" class="grow" hx-select="#main" hx-target="#main" hx-swap="innerHTML show:#main:top" hx-push-url="true">
+  <main 
+    id="main" 
+    class="grow" 
+    hx-select="#main" 
+    hx-target="this" 
+    hx-swap="innerHTML show:#main:top" 
+    hx-push-url="true"
+    hx-disabled-elt="this"
+    hx-boost="true"
+  >
     <section class="container h-full max-w-[1200px] p-6 pb-3 mx-auto">
       <div class="grid rid-cols-1 md:grid-cols-3 md:gap-[60px]">
         <div class="md:col-span-2 flex flex-col">
