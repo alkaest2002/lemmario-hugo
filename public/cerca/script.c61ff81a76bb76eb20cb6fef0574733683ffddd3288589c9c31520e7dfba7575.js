@@ -1,0 +1,1 @@
+(()=>{window.addEventListener("DOMContentLoaded",e=>{new PagefindUI({element:"#search",showSubResults:!0,showImages:!1}),document.getElementsByClassName("pagefind-ui__search-input")[0].focus()});})();

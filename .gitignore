@@ -22,6 +22,5 @@ go.work
 
 _tailwind
 .DS_Store
-public/
 resources/
 node_modules/
